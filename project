@@ -1,0 +1,56 @@
+board = ["-", "-", "-",
+         "-", "-", "-",
+         "-", "-", "-"]
+def print_board():
+    print(board[0] + "|" + board[1] + "|" + board[2])
+    print(board[3] + "|" + board[4] + "|" + board[5])
+    print(board[6] + "|" + board[7] + "|" + board[8]) 
+
+def input():
+ def position():    
+    print(player + "'s turn.")
+    position = input("Choose a position from 0 to 8")
+    while position not in ["0","1","2","3","4","5","6","7","8"]:
+     position = input("Invalid input. Choose a position from 0 to 8: ")
+    while board[position] != "_":
+     position = input("Position already taken. Choose a different position:")
+    board[position] = player
+    print_board
+
+    def check_game_over():
+     if(board[0] == board[1] == board[2] != "-") or \
+    (board[0] == board[4] == board[8] != "-") or \
+    (board[1] == board[4] == board[7] != "-") or \
+    (board[2] == board[5] == board[8] != "-") or \
+    (board[2] == board[4] == board[6] != "-") or \
+    (board[3] == board[4] == board[5] != "-") or \
+    (board[6] == board[7] == board[8] != "-") or \
+    (board(0) == board[3] == board[6] != "-"):
+      return "win"
+      elseif
+      "-" not in board
+      return "tie"
+      else_
+      return "play"
+
+ def play_game(): 
+   print_board
+   def current_player():
+    (current_player) == "X"
+   game_over = False
+   while not game_over:
+       take_turn(current_player)
+       if game_result == "win":
+           print(current_player + "wins!")
+           game_over = True
+           _elif
+           game_result == "tie"
+           print("It's a tie")
+           game_over = True
+           _elif
+           game_result = "play"
+           game_result = check_game_over()
+           (current_player == "O" if current_player == "X" else "X")          
+           game_over = False
+           play_game()
+           
